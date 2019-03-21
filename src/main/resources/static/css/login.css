@@ -1,0 +1,170 @@
+/* >> µÇÂ¼ 
+    ._dl_ .contain{margin:0px auto;width:960px;}
+    ._dl_ .header{background:url(img/_login_header.png);border-bottom:4px solid #085584;height:106px;}
+    ._dl_ .content {background:url(img/_login_content.png);border-bottom:2px solid #91c9eb;height:429px;margin-top:1px;overflow:hidden;}
+    ._dl_ .content form{margin:115px 0px 0px 562px;font-size:12px;}
+    ._dl_ .content form tr{line-height:24px;}
+    ._dl_ .content form label{color:#085584;}
+    ._dl_ .content form input{border:1px solid #458fbc;border-radius:4px;}
+    ._dl_ .footer{background:#eef9ff;height:74px;margin-top:1px;overflow:hidden;}
+    ._dl_ .footer p{color:#666;font-size:14px;margin:18px 0px 0px 800px;text-shadow:1px 1px 1px #d9d9d9;}
+    ._dl_ #J_Login{background:url(img/login_button.png);border:1px solid #cfa66d;border-radius:3px;color:#513610;display:inline-block;height:25px;line-height:25px;margin:12px 0px 0px 2px;padding:0px 5px 0px 26px;position:relative;}
+    ._dl_ #J_Login s{background:url(img/icon.png) no-repeat -10px -160px;display:inline-block;height:16px;left:5px;position:absolute;top:5px;width:16px;} 
+    
+*/
+body {
+	font-size: 12px;
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.contain {
+	overflow: hidden;
+	background: url(img/login_bg.png) 0 0 no-repeat;
+	min-height: 1617px;
+	
+}
+.content{
+	position: relative;
+}
+.header {
+	background: url(img/login_header_bg.png) 0 0 no-repeat;
+	height: 73px;
+	margin-left: 30px;
+	margin-top: 25px;
+}
+
+#login-wrap {
+	width: 345px;
+	height: 340px;
+	background: url(img/login_form.png) 0 0 no-repeat;
+	padding: 7px;
+	margin-left: 110px;
+	margin-top: 80px;
+}
+
+#login-wrap .login-logo {
+	width: 116px;
+	height: 37px;
+	background: url(img/login_title.png) 0 0 no-repeat;
+	margin-left: 18px;
+	margin-top: 15px;
+}
+
+#login-wrap form {
+	margin: 24px 0 0 50px;
+}
+
+#login-wrap .row {
+	line-height: 30px;
+}
+
+#login-wrap label {
+	display: block;
+	color: #085584;
+	padding-left: 5px;
+}
+
+#login-wrap input {
+	height: 24px;
+	line-height: 24px;
+	width: 190px;
+	border: 1px solid #458fbc;
+	border-radius: 4px;
+	padding: 1px 5px;
+}
+#login-wrap span{
+	font-size: 12px;
+	color:red;	
+}
+
+#J_Login {
+	background: url(img/login_button.png) 0 0 repeat-x;
+	border: 1px solid #cfa66d;
+	border-radius: 3px;
+	color: #513610;
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	margin: 12px 0px 0px 2px;
+	text-align: center;
+	padding: 0px 5px 0px 26px;
+	position: relative;
+}
+
+#J_Login s {
+	background: url(img/icon.png) no-repeat -10px -160px;
+	display: inline-block;
+	height: 16px;
+	left: 5px;
+	position: absolute;
+	top: 5px;
+	width: 16px;
+}
+
+#xzfy-wrap{
+	width:252px;
+	height:406px;
+	position: absolute;
+	left:448px;
+	top:6px;
+	background-color: white;
+	border:1px solid #d8d8d8;
+	border-radius: 5px;
+}
+#xzfy-title{
+	color:red;
+	line-height: 30px;
+	border-bottom: 1px dashed #ccc;
+	padding:2px 10px;
+}
+#xzfy-top{
+	line-height: 40px;
+	border-bottom: 1px dashed #ccc;
+	padding:2px 10px;
+}
+#j_tv_fy{
+	margin:5px;
+	overflow: auto;
+	height: 320px;
+}
+
+#j_tv_fy .collapsable, 
+#j_tv_fy .expandable {
+	background: url(img/xzfy_tree_indicator.png) 0 0 no-repeat;	
+	overflow: hidden;
+}
+#j_tv_fy .collapsable{
+	background-position: 0 -16px;
+}
+
+#xzfy-wrap a.active{
+	color:white;
+	background-color: #a0a0a0;
+}
+
+#xzfy-wrap li{
+	list-style: none;
+}
+
+#xzfy-wrap a{
+	padding: 3px;
+}
+
+#table{
+	display: none;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+}
+
+#main{
+	overflow: auto;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+}
+
+#myTable{
+	margin-bottom:30px;
+	display: none;
+}

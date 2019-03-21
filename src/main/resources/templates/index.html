@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/login.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/jcDate.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../static/css/page.css">
+    <script src="../static/js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../static/js/jQuery-jcDate.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../static/js/jquery.page.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="../static/js/easyUi/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../static/js/easyUi/themes/icon.css">
+    <script type="text/javascript" src="../static/js/easyUi/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../static/js/easyUi/jquery.easyui.min.js"></script>
+    <script typeof="text/javascript" src="../static/js/easyUi/locale/easyui-lang-zh_CN.js"></script>
+
+
+    <title>后台查看</title>
+    <script type="text/javascript">
+
+    </script>
+
+    <style>
+        .header{
+            margin-left: 20px;
+            background-color: rgb(0, 165, 165);
+            width: 1300px;
+            height: 80px;
+            line-height: 80px;
+            background: #00a5a5;
+        }
+
+        .logo {
+            line-height: 40px;
+            font-size: 30px;
+            color: #f5f0f0;
+            letter-spacing: 3px;
+            margin-left: 50px;
+            float: left;
+        }
+        #searchbtn {
+            width: 150px;
+            border-radius: 35px;
+            height: 43px;
+            text-align: center;
+            margin-top: 12px;
+            margin-left: 278px;
+            font-size: 17px;
+            background-color: rgb(0, 165, 165);
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">基于15法标的数据报送系统后台管理</div>
+    </div>
+
+    <form id="mysearch">
+        <div class="search">
+            <div style="padding-left: 100px;width: 1300px;" class="ui four column centered grid">
+                <div class="row">
+                    <div class="column">
+                        <div class="ui labeled input">
+                            <div class="ui label">法院</div>
+                            <select class="ui dropdown" id="fydm" name="fydm">
+                                <option value="120000 200"></option>
+                                <option value="120000 200">天津市高级人民法院</option>
+                                <option value="120100 210">天津市第一中级人民法院</option>
+                                <option value="120101 211">天津市和平区人民法院</option>
+                                <option value="120104 212">天津市南开区人民法院</option>
+                                <option value="120105 213">天津市河北区人民法院</option>
+                                <option value="120106 214">天津市红桥区人民法院</option>
+                                <option value="120107 215">天津市西青区人民法院</option>
+                                <option value="120108 216">天津市北辰区人民法院</option>
+                                <option value="120222 217">天津市武清区人民法院</option>
+                                <option value="120223 218">天津市静海区人民法院</option>
+                                <option value="120224 219">天津市宝坻区人民法院</option>
+                                <option value="120225 21A">天津市蓟县人民法院</option>
+                                <option value="920103 132">天津铁路运输法院</option>
+                                <option value="120200 220">天津市第二中级人民法院</option>
+                                <option value="120202 221">天津市河东区人民法院</option>
+                                <option value="120203 222">天津市河西区人民法院</option>
+                                <option value="120207 226">天津市东丽区人民法院</option>
+                                <option value="120208 227">天津市津南区人民法院</option>
+                                <option value="120221 228">天津宁河区人民法院</option>
+                                <option value="120242 22A">天津滨海法院</option>
+                                <option value="960200 230">天津海事法院</option>
+                                <option value="120204 223">天津市塘沽区人民法院</option>
+                                <option value="120205 224">天津市汉沽区人民法院</option>
+                                <option value="120206 225">天津市大港区人民法院</option>
+                                <option value="120241 229">天津市经济技术开发区人民法院</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui labeled input">
+                            <div class="ui label">日志类型</div>
+                            <select class="ui dropdown" id="type" name="type">
+                                <option value=""> </option>
+                                <option value="SF">SF</option>
+                                <option value="ZS">ZS</option>
+                                <option value="NEWJA">NEWJA</option>
+                                <option value="JG">JG</option>
+                                <option value="JA">JA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui labeled input">
+                            <div class="ui label">起始时间</div>
+                            <input id="startTime" name="startTime" class="jcDate" placeholder="">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui labeled input">
+                            <div class="ui label">结束时间</div>
+                            <input id="endTime" name="endTime" class="jcDate" type="text" placeholder="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="searchbutton">
+                <button class="ui primary button"  id="searchbtn" >查询</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="result" style="padding-left: 20px">
+        <table id="sjlb" class="tt" style="border-bottom: 0px;"></table>
+    </div>
+    <div id="tcdPageCode">
+    </div>
+</body>
+<script>
+
+    $(function () {
+        //日期插件
+        $('#startTime').datebox({
+            required:true,
+            panelWidth:200,
+            height: 32
+
+        });
+        $('#endTime').datebox({
+            required:true,
+            panelWidth:200,
+            height: 32
+        });
+        //初始化表格：
+        initTable();
+
+        /*搜索按钮*/
+        $('#searchbtn').click(function(){
+            alert("rr")
+            $('#sjlb').datagrid("load",serializeForm($('#mysearch')));
+        });
+        function initTable(){
+            alert("r1")
+            $('#sjlb').datagrid({
+                idField:"sjlbId",
+                width:  1300,
+                nowrap:false,
+                height:'auto',
+                striped:true,
+                fitColumns:true,
+                scrollbarSize:0,
+                rownumbers:true,
+                url:"search",
+                loadMsg:"数据正在加载.....",
+                pagination:true,
+                pageList:[5,10,15,20,50],
+                pageSize:5,
+                // queryParams: serializeForm($('#mysearch')),　　//关键之处
+                columns:[
+                    [
+                        {field:'id',hidden:true},
+                        {field:'fydm',title:'法院代码',width:80,align:"center"},
+                        {field:'type',title:'日志类型',width:50,align:"center"},
+                        {field:'status',title:'导出状态',width:50,align:"center"},
+                        {field:'message',title:'日志信息',width:260,align:"center"},
+                        {field:'time',title:'导出时间',width:80,align:"center"},
+                        {field:'errorType',title:'错误类型',width:50,align:"center"},
+                        {field:'errorMessage',title:'错误日志信息',width:200,align:"center"},
+                    ]
+                ]
+            });
+
+        }
+    });
+
+
+    //js方法：序列化表单
+    function serializeForm(form){
+        var obj = {};
+        $.each(form.serializeArray(),function(index){
+            if(obj[this['name']]){
+                obj[this['name']] = obj[this['name']] + ','+this['value'];
+            } else {
+                obj[this['name']] =this['value'];
+            }
+        });
+        return obj;
+    }
+</script>
+
+</html>
